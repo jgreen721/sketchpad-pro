@@ -11,7 +11,7 @@ const SketchPad = () => {
   
 
   return (
-    <div>
+    <div className="full-screen-container">
       <BgOverlay src={spaceBg2}/>
         <div className="sketch-pad-parent view-container">
             <div className="sketchpad-content">
