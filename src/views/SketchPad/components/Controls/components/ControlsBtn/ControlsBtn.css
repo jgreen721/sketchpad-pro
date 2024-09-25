@@ -1,0 +1,22 @@
+.controls-btn {
+  position: relative;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.active-btn {
+  background: gray;
+}
+
+@media screen and (max-width: 550px) {
+  .controls-btn {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}

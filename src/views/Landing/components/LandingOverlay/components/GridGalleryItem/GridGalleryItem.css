@@ -1,0 +1,147 @@
+.grid-gallery-img-card {
+  animation: float var(--duration) linear infinite;
+  position: relative;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 3px -5px 12px rgba(15, 20, 20, 0.5) inset;
+  min-width: 125px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2rem);
+  }
+
+  75% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: 2px 3px 6.5px rgba(15, 20, 20, 0.65);
+}
+
+.gallery-img-1 {
+  height: 250px;
+  width: 225px;
+  transform: rotate(12deg);
+}
+
+.gallery-img-2 {
+  height: 250px;
+  width: 225px;
+  transform: rotate(7.5deg);
+}
+
+.gallery-img-3 {
+  height: 250px;
+  width: 285px;
+  transform: rotate(-12.5deg);
+}
+
+.gallery-img-4 {
+  height: 250px;
+  width: 225px;
+  transform: rotate(-22deg);
+}
+
+.gallery-img-5 {
+  height: 250px;
+  width: 225px;
+  transform: rotate(4deg);
+}
+
+.gallery-img-6 {
+  height: 300px;
+  width: 255px;
+  transform: rotate(-2deg);
+}
+
+@media screen and (max-width: 875px) {
+  .gallery-img-1 {
+    height: 170px;
+    width: 135px;
+    transform: rotate(2deg);
+  }
+
+  .gallery-img-2 {
+    height: 185px;
+    width: 135px;
+    transform: rotate(2deg);
+  }
+
+  .gallery-img-3 {
+    height: 155px;
+    width: 195px;
+    transform: rotate(-2deg);
+  }
+
+  .gallery-img-4 {
+    height: 145px;
+    width: 105px;
+    transform: rotate(2deg);
+  }
+
+  .gallery-img-5 {
+    height: 170px;
+    width: 135px;
+    transform: rotate(4deg);
+  }
+
+  .gallery-img-6 {
+    height: 195px;
+    width: 175px;
+    transform: rotate(-2deg);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gallery-img-1 {
+    height: 130px;
+    width: 95px;
+    transform: rotate(2deg);
+  }
+
+  .gallery-img-2 {
+    height: 125px;
+    width: 105px;
+    transform: rotate(2deg);
+  }
+
+  .gallery-img-3 {
+    height: 110px;
+    width: 120px;
+    transform: rotate(-2deg);
+  }
+
+  .gallery-img-4 {
+    height: 115px;
+    width: 85px;
+    transform: rotate(2deg);
+  }
+
+  .gallery-img-5 {
+    height: 115px;
+    width: 95px;
+    transform: rotate(4deg);
+  }
+
+  .gallery-img-6 {
+    height: 115px;
+    width: 125px;
+    transform: rotate(-2deg);
+  }
+}

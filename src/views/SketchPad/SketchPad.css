@@ -1,0 +1,47 @@
+.sketch-pad-parent {
+  /* height: 100vh; */
+  /* z-index: 50;
+  position: relative; */
+  padding: 2rem;
+  /* width: 100%;
+  height: 100%; */
+  border: 5px solid green;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+.sketchpad-content {
+  position: relative;
+  z-index: 50;
+}
+.sketchpad-content-row {
+  flex-grow: 1;
+  /* border: 3px solid blue; */
+  display: flex;
+  padding: 0rem 2rem;
+  gap: 2rem;
+}
+
+.controls-column {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.sketchpad-grid-column {
+  flex: 2;
+  /* border: 3px solid green; */
+}
+
+@media screen and (max-width: 850px) {
+  .sketch-pad-parent {
+    height: auto;
+  }
+  .sketchpad-content-row {
+    flex-direction: column;
+    /* padding: 0rem; */
+  }
+}

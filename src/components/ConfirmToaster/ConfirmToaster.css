@@ -1,0 +1,32 @@
+.confirm-toaster-parent {
+  padding: 0.5rem;
+  position: absolute;
+  text-align: center;
+  box-shadow: 3px 4px 12px rgba(25, 20, 20, 0.45);
+  background: white;
+  transition: 0.25s ease;
+  z-index: 50;
+}
+
+.confirm-toaster-btn-row {
+  padding: 0.5rem;
+}
+.confirm-btn {
+  margin: 0rem 0.5rem;
+  width: 105px;
+  border-radius: 0.5rem;
+  padding: 0.35rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  background: lightgray;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.show-toaster {
+  transform: scale(1);
+}
+
+.hide-toaster {
+  transform: scale(0);
+}

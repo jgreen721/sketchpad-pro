@@ -1,0 +1,153 @@
+.landing-content-container {
+  /* border: 5px solid red; */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem var(--mainPaddingX);
+  z-index: 5;
+}
+
+.landing-header-text {
+  line-height: 4.5rem;
+}
+
+.landing-header-and-btn {
+  position: relative;
+  color: white;
+}
+
+.landing-header {
+  letter-spacing: -0.5rem;
+  transform: rotate(-4.5deg);
+  position: relative;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.landing-header::after {
+  content: "";
+  background: linear-gradient(to right, darkblue, rgb(30, 255, 0));
+  position: absolute;
+  inset: 0;
+  opacity: 22.5%;
+  width: 115%;
+  left: -7.5%;
+  filter: blur(35px);
+  animation: brushright 0.25s 0.25s ease-out forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes brushright {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.landing-header-column {
+  position: relative;
+  z-index: 10;
+}
+
+.landing-header-text-row {
+  display: flex;
+}
+
+.landing-header-text-row h1:nth-child(2) {
+  margin-left: -0.25rem;
+}
+
+.gradient-text {
+  background-image: linear-gradient(darkblue, rgb(74, 105, 206));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.absolute-text {
+  position: absolute;
+  inset: 0;
+}
+
+.absolute-bottom-text {
+  bottom: 0;
+  position: absolute;
+}
+
+.shadow-gradient {
+  background-image: linear-gradient(red, rgb(74, 105, 206));
+  color: transparent;
+  background-clip: text;
+  filter: blur(7.5px);
+}
+
+.landing-btn-container {
+  position: absolute;
+  inset: 0;
+  padding: 3.5rem 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.landing-link-btn {
+  /* width: 150px; */
+  box-shadow: 2px 2px 5.5px rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 0.65rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  font-family: var(--mainFont);
+  cursor: pointer;
+  background: rgb(15, 15, 20);
+  transition: 0.15s ease-in;
+  position: relative;
+}
+
+.landing-link-btn:hover {
+  box-shadow: 2px 2px 2px white, 3px 3px 6.5px rgba(255, 255, 255, 0.55),
+    5px 5px 12.5px rgba(255, 255, 255, 0.55);
+  transition: 0.15s ease;
+  transform: scale(0.9, 1.1);
+}
+
+.link-btn {
+  position: relative;
+  transition: 0.25s ease-in;
+}
+
+.link-btn:hover {
+  transform: scale(0.9, 1.2);
+  transition: 0.05s ease-out;
+}
+@media screen and (max-width: 875px) {
+  .landing-header-and-btn {
+    transform: translateY(-5rem);
+  }
+  .landing-btn-container {
+    position: absolute;
+    inset: 0;
+    padding: 0rem 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .landing-btn {
+    width: 100px;
+    padding: 0.45rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .landing-content-container {
+    align-items: center;
+  }
+}

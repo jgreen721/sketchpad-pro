@@ -1,0 +1,13 @@
+.comment-form-div {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.add-comment-btn {
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: rgb(125, 15, 20);
+}

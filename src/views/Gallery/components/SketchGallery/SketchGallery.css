@@ -1,0 +1,23 @@
+.sketch-gallery-parent {
+  padding: 2rem;
+  position: relative;
+  /* height: 100%; */
+  overflow: auto;
+}
+.gallery-items-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+@media screen and (max-width: 1050px) {
+  .gallery-items-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
+  .gallery-items-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

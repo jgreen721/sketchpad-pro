@@ -1,0 +1,42 @@
+.comments-section {
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgb(10, 10, 5);
+  z-index: 10;
+  height: 100%;
+  transform-origin: top;
+  transition: 0.25s ease;
+  overflow-y: auto;
+  top: 50%;
+}
+
+.comments-section::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-comments {
+  transform: scaleY(0);
+}
+
+.show-comments {
+  transform: scaleY(1);
+}
+
+.close-comments-btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid white;
+  padding-top: 0.5rem;
+}
+
+.close-comments-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: white;
+}

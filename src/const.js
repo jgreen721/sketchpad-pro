@@ -1,0 +1,9 @@
+export const gridArt1 = "./assets/gridart1.jpeg";
+export const gridArt2 = "./assets/gridart2.jpg";
+export const gridArt3 = "./assets/gridart3.webp";
+export const gridArt4 = "./assets/gridart4.jpg";
+export const gridArt5 = "./assets/gridart5.webp";
+export const gridArt6 = "./assets/gridart6.jpeg";
+export const spaceBg = "./spacebg.webp";
+export const spaceBg2 = "./spacebg2.avif";
+export const spaceBg3 = "./spacebg3.jpg";

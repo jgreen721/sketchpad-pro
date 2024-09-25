@@ -1,0 +1,13 @@
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+  height: 100%;
+}
+
+.empty-content-card {
+  width: clamp(600px, 75%, 90%);
+  /* border: 2px solid red; */
+  text-align: center;
+}
