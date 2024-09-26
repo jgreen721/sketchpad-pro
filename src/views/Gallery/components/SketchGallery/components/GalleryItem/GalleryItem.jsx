@@ -51,7 +51,7 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
             {/* <CommentsSection galleryItem={galleryItem} comments={comments.filter(c=>c.imageTitle == galleryItem.title)} showComments={showComments} setShowComments={setShowComments}/> */}
 
         </div>
-        <CommentsSection galleryItem={galleryItem} comments={comments.filter(c=>c.imageTitle == galleryItem.title)} showComments={showComments} setShowComments={setShowComments}/>
+        {/* <CommentsSection galleryItem={galleryItem} comments={comments.filter(c=>c.imageTitle == galleryItem.title)} showComments={showComments} setShowComments={setShowComments}/> */}
 
     </div>
   )

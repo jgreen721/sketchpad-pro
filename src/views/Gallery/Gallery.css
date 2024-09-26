@@ -1,3 +1,4 @@
 .gallery-parent-container {
-  height: 100vh;
+  padding: 0rem var(--mainPaddingX);
+  height: 100vh; /*allows gallery overflow:auto to behave desirably (Navbar stays fixed at top)*/
 }

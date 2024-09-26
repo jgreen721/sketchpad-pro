@@ -10,14 +10,14 @@ const Login = () => {
   return (
   
       <div className="full-screen-container login-container">
-      <div className="view-container">
-        <BgGrid/>
-        <LoginOverlay/>
-        <LoginContent/>
-      </div>
           <div style={{opacity:'35%'}}>
             <BgOverlay src={spaceBg3}/>
           </div> 
+          <div className="view-container">
+            <BgGrid/>
+            <LoginOverlay/>
+            <LoginContent/>
+          </div>
       </div>
   
     

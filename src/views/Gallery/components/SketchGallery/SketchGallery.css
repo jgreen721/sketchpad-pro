@@ -1,14 +1,19 @@
 .sketch-gallery-parent {
-  padding: 2rem;
-  position: relative;
-  /* height: 100%; */
+  /* padding: 2rem; */
+  /* border: 2px solid orange; */
+  /* position: relative; */
+  height: 100%;
   overflow: auto;
+  padding: 0rem 2rem;
+  padding-top: 3rem; /* 3 + 2 for desired spacing  */
+  margin-top: 2rem; /*between border and Nav */
+  border-top: 2px solid rgba(135, 125, 205, 0.5);
 }
 .gallery-items-list {
   display: grid;
-  gap: 1rem;
+  /* gap: 1rem; */
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
+  /* position: relative; */
 }
 
 @media screen and (max-width: 1050px) {
@@ -19,5 +24,6 @@
 @media screen and (max-width: 650px) {
   .gallery-items-list {
     grid-template-columns: repeat(1, 1fr);
+    gap: 0rem;
   }
 }

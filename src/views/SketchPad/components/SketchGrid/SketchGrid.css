@@ -17,4 +17,7 @@
 }
 
 @media screen and (max-width: 550px) {
+  .cel {
+    border: 1px solid black;
+  }
 }

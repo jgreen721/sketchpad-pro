@@ -14,7 +14,8 @@ export const GalleryProvider=({children})=>{
 
     const [images,setImages] = useState([])
     const [galleryItems,setGalleryItems] = useState([])
-    const [comments,setComments] = useState([])
+    const [comments,setComments] = useState([]);
+    const [selectedItem,setSelectedItem] = useState(null);
     const [isEmpty,setIsEmpty] = useState(false);
 
 
@@ -105,6 +106,7 @@ export const GalleryProvider=({children})=>{
         if(action == "comment"){
           // toggle comment display, 
           console.log("comment-action under construction...");
+          setSelectedItem(galleryItem);
         }
       }
 
@@ -127,6 +129,7 @@ export const GalleryProvider=({children})=>{
                comments,
                handleAction,
                addComment,
+               selectedItem,
                isEmpty,
             }
 

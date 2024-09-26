@@ -9,5 +9,8 @@
   border-radius: 0.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
+  outline: none;
   background: rgb(125, 15, 20);
+  font-weight: 600;
 }

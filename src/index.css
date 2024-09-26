@@ -37,12 +37,6 @@ a {
   /* border: 3px solid blue; */
 }
 
-.absolute-full-container {
-  position: absolute;
-  inset: 0;
-  padding: 5rem;
-}
-
 .view-container {
   position: relative;
   min-height: 100vh;
@@ -51,6 +45,7 @@ a {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /* padding: 0rem var(--mainPaddingX); */
 
   /* border: 4px solid red; */
 }
@@ -89,7 +84,7 @@ a {
 
 @media screen and (max-width: 475px) {
   :root {
-    --mainPaddingX: 2.5rem;
+    --mainPaddingX: 1.25rem;
   }
   h1 {
     font-size: 3rem;

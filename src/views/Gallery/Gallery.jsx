@@ -3,19 +3,24 @@ import {GalleryProvider} from "../../context/GalleryContext"
 import {Navbar,BgOverlay} from "../../components"
 import {SketchGallery} from "./components"
 import { spaceBg } from '../../const'
+import { BsGrid3X3 } from "react-icons/bs";
+import { MdOutlineDraw } from "react-icons/md";
+
+
+
 import "./Gallery.css";
 
 const Gallery = () => {
   return (
-    <GalleryProvider>
+    <div className="full-screen-container">
+      <GalleryProvider>
         <BgOverlay src={spaceBg}/>
-
-      <div className="gallery-parent-container view-container">
-        {/* <BgOverlay src={spaceBg}/> */}
-        <Navbar link="/sketchpad" linkName="Sketchpad"/>
-        <SketchGallery/>
-       </div>
-    </GalleryProvider>
+        <div className="gallery-parent-container view-container">
+          <Navbar link="/sketchpad" linkName="Sketchpad" icon={<MdOutlineDraw />}/>
+          <SketchGallery/>
+        </div>
+      </GalleryProvider>
+    </div>
   )
 }
 

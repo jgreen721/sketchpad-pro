@@ -3,7 +3,7 @@ import {useAppContext} from "../../context/AppContext"
 import {Link} from "react-router-dom"
 import "./Navbar.css"
 
-const Navbar = ({link,linkName}) => {
+const Navbar = ({link,linkName,icon}) => {
   const {active} = useAppContext();
   return (
     <nav className="nav">
@@ -15,7 +15,7 @@ const Navbar = ({link,linkName}) => {
         </Link>
       </div>
         <button className="nav-link-btn">
-            <Link className="nav-link" to={link}>{linkName}</Link>
+            <Link className="nav-link" to={link}>{icon}</Link>
         </button>
     </nav>
   )
