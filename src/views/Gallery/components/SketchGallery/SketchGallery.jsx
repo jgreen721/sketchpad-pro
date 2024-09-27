@@ -1,7 +1,6 @@
 import React from 'react'
 import { useGalleryContext } from '../../../../context/GalleryContext'
-import { GalleryItem,NoGalleryDisplay } from './components'
-import { CommentsSection } from './components/GalleryItem/components'
+import { GalleryItem,NoGalleryDisplay,CommentsSection } from './components'
 import "./SketchGallery.css"
 
 const SketchGallery = () => {
@@ -20,6 +19,7 @@ const SketchGallery = () => {
         ))}
       </ul>
       {selectedItem && <CommentsSection galleryItem={selectedItem} comments={comments.filter(c=>c.imageTitle == selectedItem.title)}/>}
+       
 
       </>
         : isEmpty

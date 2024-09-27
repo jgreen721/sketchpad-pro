@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+.thin {
+  font-weight: 300;
+}
+
 /* Utility Classes */
 
 .full-screen-container {
@@ -84,7 +88,7 @@ a {
 
 @media screen and (max-width: 475px) {
   :root {
-    --mainPaddingX: 1.25rem;
+    --mainPaddingX: 0.5rem;
   }
   h1 {
     font-size: 3rem;

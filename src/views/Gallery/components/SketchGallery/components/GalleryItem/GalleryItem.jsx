@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {FaThumbsUp,FaFaceLaugh,FaComment,FaHeart} from "react-icons/fa6"
 import { useGalleryContext } from '../../../../../../context/GalleryContext';
-import { ReactionItem,CommentsSection } from './components';
+import { ReactionItem } from './components';
 import "./GalleryItem.css";
 
 
@@ -16,16 +16,16 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
         {id:4,icon:<FaHeart/>,action:"love",total:galleryItem.love,color:"rgb(235,15,25)"},
     ]
     // console.log(galleryItem)
-    const [showComments,setShowComments] = useState(false)
+    // const [showComments,setShowComments] = useState(false)
 
     const handleGalleryItemAction = (action)=>{
         console.log("action",action)
-        if(action == "comment"){
-            setShowComments(true);
-        }
-        else{
+        // if(action == "comment"){
+        //     setShowComments(true);
+        // }
+        // else{
         handleAction(galleryItem,action)
-        }
+        // }
     }
   return (
     <div style={{"--i":`${delay}s`,transform:`rotate(${rotation}deg)`}} className={`gallery-item fade-in`}>

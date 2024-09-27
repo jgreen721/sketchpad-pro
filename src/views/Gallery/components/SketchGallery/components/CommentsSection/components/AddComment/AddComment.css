@@ -1,0 +1,35 @@
+.add-comment-section {
+  /* border: 2px solid blue; */
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.comment-form-div {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  background: transparent;
+}
+
+.add-comment-btn {
+  padding: 0.25rem 1.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: rgb(15, 10, 15);
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+}
+
+.add-form-control {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}

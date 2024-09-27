@@ -129,6 +129,7 @@ export const GalleryProvider=({children})=>{
                comments,
                handleAction,
                addComment,
+               setSelectedItem,
                selectedItem,
                isEmpty,
             }

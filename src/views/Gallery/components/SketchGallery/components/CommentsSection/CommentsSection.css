@@ -1,0 +1,117 @@
+.comments-parent-section {
+  position: absolute;
+  inset: 0;
+  /* border: 5px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding: 0rem var(--mainPaddingX);
+  z-index: 100;
+}
+
+.comments-parent-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(5, 10, 10),
+    rgba(20, 15, 15),
+    rgba(35, 40, 40)
+  );
+  opacity: 82.5%;
+}
+
+.comments-parent-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+}
+
+.comment-section-content {
+  flex-grow: 1;
+  /* border: 3px solid blue; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.comment-section-content-row {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  /* height: 450px; */
+  /* border: 3px solid red; */
+}
+
+.comment-section-col {
+  flex: 1;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 450px;
+  overflow-y: auto;
+}
+
+.comments-section {
+  position: relative;
+  /* border: 2px solid red; */
+  /* height: 100%; */
+  /* overflow-y: auto; */
+  /* border: 3px solid red; */
+  /* height: 100%; */
+}
+
+/* .comments-section::-webkit-scrollbar {
+  display: none;
+} */
+
+.comment-section-img {
+  height: 450px;
+  width: 450px;
+  /* height: 100%;
+  width: 100%; */
+  border-radius: 0.5rem;
+}
+
+.hide-comments {
+  transform: scaleY(0);
+}
+
+.show-comments {
+  transform: scaleY(1);
+}
+
+@media screen and (max-width: 1050px) {
+  .comment-section-content-row {
+    /* flex-direction: column;
+    align-items: center; */
+    /* height: auto */
+    display: block;
+    overflow: auto;
+  }
+  .comment-section-col {
+    /* width: 100%; */
+    height: 300px;
+    /* border: 3px solid red; */
+    padding: 1rem 0;
+  }
+
+  .comment-section-col:nth-child(2) {
+    /* height: 100 */
+    /* height: 200px; */
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* .comment-section-content-row {
+    flex-direction: column;
+  } */
+  .comment-section-img {
+    height: 100%;
+    width: 100%;
+  }
+}
