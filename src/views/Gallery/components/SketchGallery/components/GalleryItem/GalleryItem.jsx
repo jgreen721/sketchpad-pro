@@ -28,6 +28,7 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
         // }
     }
   return (
+//   <div>
     <div style={{"--i":`${delay}s`,transform:`rotate(${rotation}deg)`}} className={`gallery-item fade-in`}>
         <div className="gallery-item-img-container">
             <img className="gallery-img" src={galleryItem.url} alt="" />
@@ -48,12 +49,11 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
                     </div>
                 </div>
             </div>
-            {/* <CommentsSection galleryItem={galleryItem} comments={comments.filter(c=>c.imageTitle == galleryItem.title)} showComments={showComments} setShowComments={setShowComments}/> */}
 
         </div>
-        {/* <CommentsSection galleryItem={galleryItem} comments={comments.filter(c=>c.imageTitle == galleryItem.title)} showComments={showComments} setShowComments={setShowComments}/> */}
+     </div>
 
-    </div>
+    //  </div>
   )
 }
 

@@ -2,15 +2,19 @@
   position: relative;
   border-radius: 0.25rem;
   overflow: hidden;
-  box-shadow: 1px 1px 2px rgba(15, 15, 20, 0.65);
   border: 15px solid rgba(255, 255, 255, 0.55);
   box-shadow: 0px 0px 20px rgba(55, 55, 55, 0.85), 0px 0px 10px black;
   /* margin: 1rem 0rem; */
   margin: 1.25rem;
-  /* width: 95%; */
+  min-width: 325px;
+  display: flex;
+  flex-direction: column;
+
+  /* width: fit-content; */
 }
 
 .gallery-item-img-container {
+  flex-grow: 1;
 }
 
 .gallery-item-content-container {
@@ -65,5 +69,6 @@
 @media screen and (max-width: 650px) {
   .gallery-item {
     margin: 2rem 0;
+    min-width: 200px;
   }
 }

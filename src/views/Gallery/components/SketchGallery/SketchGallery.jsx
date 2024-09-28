@@ -10,17 +10,13 @@ const SketchGallery = () => {
       {galleryItems.length > 0 ? 
       <>
       <ul className="gallery-items-list">
-        {new Array(20).fill(0).map((_,idx)=>(
-          <div key={idx}>
-        {galleryItems.map(galleryItem=>(
+      
+        {galleryItems.map((galleryItem,idx)=>(
           <GalleryItem key={galleryItem.id} rotation={Math.random() > .5 ? Math.random() * 5 | 0 : (Math.random() * 5 | 0) * -1} delay={idx/2} galleryItem={galleryItem}/>
         ))}
-        </div>
-        ))}
+  
       </ul>
       {selectedItem && <CommentsSection galleryItem={selectedItem} comments={comments.filter(c=>c.imageTitle == selectedItem.title)}/>}
-       
-
       </>
         : isEmpty
         ?
