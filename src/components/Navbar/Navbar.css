@@ -49,6 +49,16 @@
   top: 0.55rem;
 }
 
+.active {
+  background: var(--blue);
+  box-shadow: 2px 2px 4px var(--blue);
+}
+
+.inactive {
+  background: var(--red);
+  box-shadow: 2px 2px 4px var(--red);
+}
+
 .nav-link-btn {
   background: transparent;
   border: none;

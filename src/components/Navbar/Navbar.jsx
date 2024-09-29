@@ -11,7 +11,7 @@ const Navbar = ({link,linkName,icon}) => {
         <Link className="nav-link" to="/">
         <h2 className="pixel-font nav-header shadow-nav-header">SketchPad</h2>
         <h2 className="pixel-font nav-header nav-header-text">SketchPad</h2>
-        <span style={{backgroundColor:active ? 'green' : 'red',boxShadow:`2px 2px 4px ${active ? 'green' : 'red'}`}} className="activity-status"></span>
+        <span className={`activity-status ${active ? 'active' : 'inactive'}`}></span>
         </Link>
       </div>
         <button className="nav-link-btn">

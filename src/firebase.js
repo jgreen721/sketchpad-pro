@@ -6,12 +6,12 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA2lt5xxX451c9P4zfOi-rdiltZMu-svaY",
-  authDomain: "sketchpad-app-b88a0.firebaseapp.com",
-  projectId: "sketchpad-app-b88a0",
-  storageBucket: "sketchpad-app-b88a0.appspot.com",
-  messagingSenderId: "1052234948348",
-  appId: "1:1052234948348:web:5a0cb413895716e2da0179",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

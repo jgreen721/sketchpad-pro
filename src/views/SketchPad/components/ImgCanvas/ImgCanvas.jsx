@@ -99,7 +99,7 @@ const ImgCanvas = () => {
       <div className="canvas-container-content">
       <button onClick={()=>setShowCanvas(false)} className="cancel-canvas-btn">X</button>
     <div className="canvas-content-row">
-      <div className="img-canvas-img-div-container">
+      <div className="img-canvas-div-container">
         <canvas className="img-canvas" ref={canvasRef}></canvas>
         <img ref={imgRef} className="user-grid-img" alt="user-img" />
       </div>
@@ -115,11 +115,11 @@ const ImgCanvas = () => {
           </div>
           <div className="form-div">
             <div className="canvas-btn-col">
-            <button onClick={handleSaveAndShare} className="canvas-action-btn">Save & Share</button>
+            <button onClick={handleSaveAndShare} className="canvas-action-btn share-btn">Save & Share</button>
             </div>
             <div className="canvas-btn-col">
             {/* <button onClick={handleDownload} className="canvas-action-btns">Download</button> */}
-            <a className="canvas-action-download-link canvas-action-btn" ref={downloadRef}>
+            <a className="canvas-action-download-link canvas-action-btn download-btn" ref={downloadRef}>
               Download
             </a>
             </div>
