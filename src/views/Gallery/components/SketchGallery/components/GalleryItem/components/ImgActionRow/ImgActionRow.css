@@ -1,0 +1,20 @@
+.img-actions-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.action-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.img-action-btn {
+  font-size: 1.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

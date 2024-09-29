@@ -68,6 +68,10 @@ a {
   opacity: 0;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 @media screen and (max-width: 950px) {
   :root {
     --mainPaddingX: 4.5rem;

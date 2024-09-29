@@ -7,15 +7,15 @@ import "./Controls.css";
 
 const Controls = () => {
   const [topBtns,setTopBtns] = useState([
-    {id:1,name:"Draw",action:"draw",isActive:true},
-    {id:2,name:"Color Grabber",action:"grab",isActive:false},
-    {id:3,name:"Toggle Eraser",action:"erase",isActive:false},
-    {id:4,name:"Toggle Rainbow",action:"rainbow",isActive:false},
+    {id:1,name:"Draw",action:"draw",isActive:true,colorClass:"default-control-btn"},
+    {id:2,name:"Color Grabber",action:"grab",isActive:false,colorClass:"default-control-btn"},
+    {id:3,name:"Toggle Eraser",action:"erase",isActive:false,colorClass:"default-control-btn"},
+    {id:4,name:"Toggle Rainbow",action:"rainbow",isActive:false,colorClass:"default-control-btn"},
       ])
   const [bottomBtns,setBottomBtns] = useState([
-    {id:1,name:"Save",action:"save",isActive:false},
-    {id:2,name:"Clear",action:"clear",isActive:false},
-    {id:3,name:"Take Picture",action:"picture",isActive:false},
+    {id:1,name:"Save",action:"save",isActive:false,colorClass:"save-control-btn"},
+    {id:2,name:"Clear",action:"clear",isActive:false,colorClass:"clear-control-btn"},
+    {id:3,name:"Take Picture",action:"picture",isActive:false,colorClass:"take-picture-btn"},
   ])
   const {handleGridSize,color,bgColor,rows,handleBtnAction,setShowCanvas} = useAppContext();
 
@@ -51,7 +51,7 @@ const Controls = () => {
       
       <div className="controls-top-section controls-section">
       {bottomBtns.map(btn=>(
-        <ControlsBtn key={btn.id} section="bottom" isActive={btn.isActive} handleAction={handleAction} action={btn.action} label={btn.name}/>
+        <ControlsBtn key={btn.id} section="bottom" isActive={btn.isActive} colorClass={btn.colorClass} handleAction={handleAction} action={btn.action} label={btn.name}/>
 
       ))}
       </div>

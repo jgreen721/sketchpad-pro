@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {FaThumbsUp,FaFaceLaugh,FaComment,FaHeart} from "react-icons/fa6"
 import { useGalleryContext } from '../../../../../../context/GalleryContext';
-import { ReactionItem } from './components';
+import { ReactionItem,ImgActionRow } from './components';
 import "./GalleryItem.css";
 
 
@@ -20,27 +20,24 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
 
     const handleGalleryItemAction = (action)=>{
         console.log("action",action)
-        // if(action == "comment"){
-        //     setShowComments(true);
-        // }
-        // else{
         handleAction(galleryItem,action)
-        // }
+     
     }
   return (
-//   <div>
     <div style={{"--i":`${delay}s`,transform:`rotate(${rotation}deg)`}} className={`gallery-item fade-in`}>
         <div className="gallery-item-img-container">
             <img className="gallery-img" src={galleryItem.url} alt="" />
+            <ImgActionRow/>
         </div>
         <div className="gallery-item-content-container">
             <div className="gallery-item-content-overlay"></div>
             <div className="gallery-item-content">
-                <div>
+                <div className="title-author-row">
                     <h4 className="gallery-item-title">{galleryItem.title}</h4>
                     <h4 className="thin">By: <span className="gallery-item-author">{galleryItem.author}</span></h4>
-                    <h5 className="gallery-item-description">{galleryItem.description}</h5>
                 </div>
+                <h5 className="gallery-item-description"><span className="bold">Description</span>: {galleryItem.description}</h5>
+
                 <div>
                     <div className="reaction-btns-div">
                         {reactionsData.map(btn=>(
@@ -53,7 +50,6 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
         </div>
      </div>
 
-    //  </div>
   )
 }
 

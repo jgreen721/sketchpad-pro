@@ -1,9 +1,9 @@
 import React from 'react'
 import "./ControlsBtn.css"
 
-const ControlsBtn = ({handleAction,action,label,section,isActive}) => {
+const ControlsBtn = ({handleAction,action,label,section,isActive,colorClass}) => {
   return (
-        <button onClick={()=>handleAction(action,section)} className={isActive ? "controls-btn active-btn" : "controls-btn"}>{label}</button>
+        <button onClick={()=>handleAction(action,section)} className={isActive ? `controls-btn ${colorClass} active-btn` : `controls-btn ${colorClass}`}>{label}</button>
         )
 }
 

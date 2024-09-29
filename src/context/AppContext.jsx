@@ -10,14 +10,14 @@ export const useAppContext = ()=>useContext(AppContext);
 export const AppProvider=({children})=>{
     let savedOrInitialRowCount = JSON.parse(localStorage.getItem("row-count")) || 20;
     let savedOrInitialBgColor = JSON.parse(localStorage.getItem("bg-color")) || "rgb(55,55,155)"
-    let savedOrInitialGrid = JSON.parse(localStorage.getItem("users-grid")) || new Array(savedOrInitialRowCount * savedOrInitialRowCount).fill(0).map((_,idx)=>({id:idx+1,color:null,isColored:false}))
+    let savedOrInitialGrid = JSON.parse(localStorage.getItem("users-grid")) || new Array(savedOrInitialRowCount * savedOrInitialRowCount).fill(0).map((_,idx)=>({id:idx+1,color:null,isColored:false,isEligible:false}))
     // console.log("RowCount: " + savedOrInitialRowCount)
     // console.log("------------------------------")
     // console.log("Grid: " + savedOrInitialGrid.length)
     if(innerWidth < 650 && savedOrInitialRowCount > 30){
         console.log("ohh sorry, but your saved art is too big for this small screen grid to properly handle. We'll keep it saved for you and let you work on something else!");
         savedOrInitialRowCount = 20;
-        savedOrInitialGrid = new Array(savedOrInitialRowCount * savedOrInitialRowCount).fill(0).map((_,idx)=>({id:idx+1,color:null,isColored:false}))
+        savedOrInitialGrid = new Array(savedOrInitialRowCount * savedOrInitialRowCount).fill(0).map((_,idx)=>({id:idx+1,color:null,isColored:false,isEligible:false}))
     }
     const [rows,setRows] = useState(savedOrInitialRowCount);
     const [tempRows,setTempRows] = useState(savedOrInitialRowCount)  //used as state-reference as 2 step system of resize/user-confirm: user-confirm will update if necessary
@@ -55,8 +55,12 @@ export const AppProvider=({children})=>{
         const handleBrushAction=(celId,wasClicked)=>{
 
             if(active || wasClicked){
-            if(action == "draw")setGridTiles(gridTiles=>gridTiles.map(g=>g.id == celId ? ({...g,isColored:!g.isColored,color:g.isColored ? null : color}) : g))
-            if(action == "erase")setGridTiles(gridTiles=>gridTiles.map(g=>g.id == celId ? ({...g,isColored:false,color:null ? null : color}) : g))
+            if(action == "draw"){
+                if(gridTiles[celId-1].isEligible){
+                setGridTiles(gridTiles=>gridTiles.map(g=>g.id == celId ? ({...g,isEligible:false,isColored:true,color: color}) : g))
+                }
+            }
+            if(action == "erase")setGridTiles(gridTiles=>gridTiles.map(g=>g.id == celId ? ({...g,isEligible:false,isColored:false,color:null ? null : color}) : g))
             if(action == "rainbow"){
                 let red = Math.random() * 255 | 0
                 let green = Math.random() * 255 | 0
@@ -94,6 +98,7 @@ export const AppProvider=({children})=>{
 
 
         const toggleBrush=(brushState)=>{
+            if(!brushState)resetTilesToEligible();
             setActive(brushState)
         }
 
@@ -157,6 +162,10 @@ export const AppProvider=({children})=>{
             }
     
             setShowConfirm(false);
+        }
+
+        const resetTilesToEligible=()=>{
+            setGridTiles((gridTiles)=>gridTiles = gridTiles.map(t=>({...t,isEligible:true})));
         }
 
             const values={
