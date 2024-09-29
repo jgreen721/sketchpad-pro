@@ -35,7 +35,7 @@ const GridRowsInputController = ({rows}) => {
   return (
     <div className="grid-size-selector controls-middle-section controls-section">
       <div className="grid-size-selector-div">
-      <input onClick={(e)=>handleGridSize(e.target.value)} type="range" step={step} min={min} defaultValue={max/2} max={max} className="range-input" />
+      <input onClick={(e)=>handleGridSize(e.target.value)} onChange={(e)=>handleGridSize(e.target.value)} type="range" step={step} min={min} defaultValue={max/2} max={max} className="range-input" />
       <small className="rows-small-label">{rows} x {rows}</small>
     </div>
     <ConfirmToaster/>
