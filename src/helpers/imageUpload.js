@@ -15,7 +15,7 @@ type ImgInfo{
 // create orm
 // }
 
-export const uploadImageData = async (imgData) => {
+export const uploadImageData = async (imgData, rows) => {
   console.log("imgData", imgData);
   try {
     const docRef = await addDoc(collection(db, "img-info"), {
@@ -26,6 +26,11 @@ export const uploadImageData = async (imgData) => {
       likes: 0,
       laugh: 0,
       love: 0,
+      rows: rows,
+      rotation:
+        Math.random() > 0.5
+          ? (Math.random() * 5) | 0
+          : ((Math.random() * 5) | 0) * -1,
       timestamp: new Date(),
     });
     console.log("Document written with ID: ", docRef.id, docRef.data());

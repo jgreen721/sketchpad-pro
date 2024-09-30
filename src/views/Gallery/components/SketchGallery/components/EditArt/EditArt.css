@@ -1,0 +1,10 @@
+.edit-art-container {
+  position: absolute;
+  inset: 0;
+  background: red;
+  opacity: 35%;
+  pointer-events: none;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}

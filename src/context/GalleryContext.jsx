@@ -17,6 +17,7 @@ export const GalleryProvider=({children})=>{
     const [comments,setComments] = useState([]);
     const [selectedItem,setSelectedItem] = useState(null);
     const [isEmpty,setIsEmpty] = useState(false);
+    const [imageToEdit,setImageToEdit] = useState(null)
 
 
 
@@ -64,6 +65,8 @@ export const GalleryProvider=({children})=>{
             let imageItem = images.filter(image=>image.imageName == joinedItem.title)[0];
             joinedItem.url = imageItem.url;
             joinedItem.imagePath = imageItem.imagePath
+            if(!joinedItem?.rotation)joinedItem.rotation = Math.random() > .5 ? Math.random() * 5 | 0 : (Math.random() * 5 | 0) * -1
+         
             // console.log(joinedItem);
             joinedData.push(joinedItem)
           })
@@ -130,6 +133,8 @@ export const GalleryProvider=({children})=>{
                handleAction,
                addComment,
                setSelectedItem,
+               imageToEdit,
+               setImageToEdit,
                selectedItem,
                isEmpty,
             }

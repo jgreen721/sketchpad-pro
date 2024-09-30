@@ -77,6 +77,7 @@ const ImgCanvas = () => {
         title,
         description,
         author,
+        rows,
         src:imgRef.current.getAttribute("src")
       }
       try{

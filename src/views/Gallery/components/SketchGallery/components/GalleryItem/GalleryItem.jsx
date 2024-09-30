@@ -27,7 +27,7 @@ const GalleryItem = ({galleryItem,delay,rotation}) => {
     <div style={{"--i":`${delay}s`,transform:`rotate(${rotation}deg)`}} className={`gallery-item fade-in`}>
         <div className="gallery-item-img-container">
             <img className="gallery-img" src={galleryItem.url} alt="" />
-            <ImgActionRow/>
+            <ImgActionRow item={galleryItem}/>
         </div>
         <div className="gallery-item-content-container">
             <div className="gallery-item-content-overlay"></div>

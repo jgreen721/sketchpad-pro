@@ -1,10 +1,10 @@
 import React from 'react'
 import { useGalleryContext } from '../../../../context/GalleryContext'
-import { GalleryItem,NoGalleryDisplay,CommentsSection } from './components'
+import { GalleryItem,NoGalleryDisplay,CommentsSection,EditArt } from './components'
 import "./SketchGallery.css"
 
 const SketchGallery = () => {
-  const {galleryItems,isEmpty,selectedItem,comments} = useGalleryContext();
+  const {galleryItems,isEmpty,selectedItem,comments,imageToEdit} = useGalleryContext();
   return (
     <div className="sketch-gallery-parent">
       {galleryItems.length > 0 ? 
@@ -12,7 +12,7 @@ const SketchGallery = () => {
       <ul className="gallery-items-list">
       
         {galleryItems.map((galleryItem,idx)=>(
-          <GalleryItem key={galleryItem.id} rotation={Math.random() > .5 ? Math.random() * 5 | 0 : (Math.random() * 5 | 0) * -1} delay={idx/2} galleryItem={galleryItem}/>
+          <GalleryItem key={galleryItem.id} rotation={galleryItem.rotation} delay={idx/2} galleryItem={galleryItem}/>
         ))}
   
       </ul>
@@ -24,6 +24,7 @@ const SketchGallery = () => {
       :
       <NoGalleryDisplay text="Loading...🕥"/>
         }
+        {imageToEdit &&  <EditArt/>}
     </div>
   )
 }
